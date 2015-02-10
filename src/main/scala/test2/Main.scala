@@ -3,13 +3,18 @@
  */
 import scala.collection.parallel.immutable
 import scala.io.Source
+import scala.App
 
-object Main {
+object Main extends App {
+  println(
+    """
+      |Welcome to the scala playground!
+      |This is follow the <Programming
+      |in Scala: A Comprehensive Step-by-Step
+      |Guide> and the examples in the book.
+    """.stripMargin)
 
-  def main(args: Array[String])
-  {
     sample2()
-  }
 
   def sample2(){
     val hanoi = new Hanoi()
