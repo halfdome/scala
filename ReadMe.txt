@@ -1,4 +1,5 @@
-Camel Router with Scala DSL Project
+Scala Learning & Practice Project
+Created in IntelliJ 13 w/ Scala plugin
 ===================================
 
 To build this project use
@@ -9,7 +10,4 @@ To run this project
 
     mvn exec:java
     
-For more help see the Apache Camel documentation
-
-    http://camel.apache.org/
 
