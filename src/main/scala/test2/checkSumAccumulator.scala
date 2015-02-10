@@ -1,5 +1,7 @@
 /**
  * Created by yhan on 2/9/15.
+ *
+ * Chapter 5
  */
 
 import scala.collection.mutable.Map
@@ -8,13 +10,12 @@ object checkSumAccumulator {
   private val cache = Map[String, Int]()
 
   def calculate (s: String): Int = {
-    if (cache.contains(s)) cache(s)
-    else {
+    if (!cache.contains(s)) {
       val acc = new checkSumAccumulator
       for (c <- s) acc.add(c.toByte)
       cache += (s -> acc.checkSum())
-      cache(s)
     }
+    cache(s)
   }
 }
 
