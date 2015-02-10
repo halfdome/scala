@@ -4,8 +4,11 @@
 import scala.collection.parallel.immutable
 import scala.io.Source
 import scala.App
+import test2.{checkSumAccumulator, Hanoi, Rational}
+import test2.RationalImplicits._
 
 object Main extends App {
+/*
   println(
     """
       |Welcome to the scala playground!
@@ -15,6 +18,10 @@ object Main extends App {
     """.stripMargin)
 
     sample2()
+*/
+  val r = new Rational(6,-10)
+  println((2*r).toString)
+
 
   def sample2(){
     val hanoi = new Hanoi()
