@@ -3,6 +3,7 @@
  *
  * Chapter 5
  */
+package test2
 
 import scala.collection.mutable.Map
 
