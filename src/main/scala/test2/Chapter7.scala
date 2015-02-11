@@ -31,15 +31,16 @@ val list = for {
     case 5 => println("no")
   }
 
-  def makeRowSeq(row: Int) = {
-    for (col <- 1 to 10) yield {
+  def makeRowSeq(row: Int, col: Int):List[String] = {
+    if (col == 0) List()
+    else {
       val prod = (row * col).toString
       val padding = " " * (4 - prod.length)
-      padding + prod
+      (padding + prod)::makeRowSeq (row, col-1)
     }
   }
 
-  def makeRow(row:Int) = makeRowSeq(row).mkString
+  def makeRow(row:Int) = makeRowSeq(row, 10).reverse.mkString
 
   def multiTable() = {
     val tableSeq =
