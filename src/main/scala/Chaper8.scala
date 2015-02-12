@@ -42,6 +42,7 @@ object Chapter8 extends App{
   def minus(a:Int, b:Int) = a-b
   println(minus(b=100, a=50))
 
+
   //default value
   def multiple(a:Int = 10, b:Int) = a * b
   println(multiple(b=20))
