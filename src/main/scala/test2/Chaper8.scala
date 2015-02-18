@@ -1,4 +1,5 @@
-import javax.management.remote.rmi._RMIConnection_Stub
+package test2
+
 
 /**
  * Created by yhan on 2/11/15.
