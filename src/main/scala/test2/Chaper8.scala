@@ -1,4 +1,5 @@
-import javax.management.remote.rmi._RMIConnection_Stub
+package test2
+
 
 /**
  * Created by yhan on 2/11/15.
@@ -41,6 +42,7 @@ object Chapter8 extends App{
   //named arguments
   def minus(a:Int, b:Int) = a-b
   println(minus(b=100, a=50))
+
 
   //default value
   def multiple(a:Int = 10, b:Int) = a * b
