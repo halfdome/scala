@@ -1,4 +1,4 @@
-package test2
+package com.han.scala.learn.book
 
 import java.io.File
 import scala.io.Source

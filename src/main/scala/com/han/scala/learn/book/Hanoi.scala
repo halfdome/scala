@@ -1,4 +1,4 @@
-package test2
+package com.han.scala.learn.book
 
 import scala.collection.mutable
 

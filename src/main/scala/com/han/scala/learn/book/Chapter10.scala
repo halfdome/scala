@@ -1,4 +1,4 @@
-package test2
+package com.han.scala.learn.book
 
 /**
  * Created by yhan on 2/17/15.

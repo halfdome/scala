@@ -1,11 +1,13 @@
+package com.han.scala.learn.book
+
 /**
  * Created by yhan on 2/8/15.
  */
 import scala.collection.parallel.immutable
 import scala.io.Source
 import scala.App
-import test2.{checkSumAccumulator, Hanoi, Rational}
-import test2.RationalImplicits._
+import test2.Rational
+import RationalImplicits._
 
 object Main extends App {
 /*
