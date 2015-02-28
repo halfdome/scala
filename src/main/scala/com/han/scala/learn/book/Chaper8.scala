@@ -33,7 +33,7 @@ object Chapter8 extends App{
   println(bound2(5))
 
   //repeated parameters
-  def echo(args:String *) = for (arg <- args) print(arg)
+  def echo(args:String *) = args.foreach(print)
   echo("*","*","*","*","*","*")
   val array=Array("a","b","c")
   echo(array: _*)
@@ -51,11 +51,11 @@ object Chapter8 extends App{
   def boom(x:Int):Int =
     if (x == 0) throw new IllegalStateException
     else boom(x-1)
-  boom(5)
+
   def boom1(x:Int):Int =
     if (x == 0) throw new IllegalStateException
     else boom1(x-1)+1
-  boom(5)
+  boom1(5)
 
 
 }

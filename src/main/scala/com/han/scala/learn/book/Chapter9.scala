@@ -6,10 +6,6 @@ import scala.io.Source
 /**
  * Created by yhan on 2/12/15.
  */
-class Chapter9 {
-
-}
-
 object Chapter9 extends App{
   private val file = Source.fromFile("/Users/yhan/workspace/scala/test2/src/main/scala/test2/Main.scala").getLines().toList
 
@@ -27,10 +23,7 @@ object Chapter9 extends App{
 
   contains1("string").foreach(println)
 
-  def plus(x:Int)(y:Int) = x+y
+  def plus(x:Int)(y:Int) = x + y
   val fivePlus = plus(6)_
-  val n = fivePlus(6)
-  println(n)
-
-
+  println(fivePlus(6))
 }

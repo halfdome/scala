@@ -3,11 +3,6 @@ package com.han.scala.learn.book
 /**
  * Created by yhan on 2/9/15.
  */
-class Chapter7{
-
-
-}
-
 object Chapter7 extends App{
 val list = for {
     i <- 1 to 5
@@ -49,6 +44,6 @@ val list = for {
     tableSeq.mkString("\n")
   }
 
-  print(multiTable())
+  print(multiTable)
 
 }

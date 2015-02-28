@@ -10,7 +10,7 @@ import test2.Rational
 import RationalImplicits._
 
 object Main extends App {
-/*
+
   println(
     """
       |Welcome to the scala playground!
@@ -19,10 +19,10 @@ object Main extends App {
       |Guide> and the examples in the book.
     """.stripMargin)
 
-    sample2()
-*/
+  sample1()
+
   val r = new Rational(6,-10)
-  println((2*r).toString)
+  println((2 * r).toString)
 
 
   def sample2(){
@@ -43,12 +43,12 @@ object Main extends App {
   def sample1(){
     val list = List(1, 3, 5):::Nil
     val list1 = list.:::(List(-3, -1))
-    val total = list1.reduce(add1)
-    val list2 = list.map(b => b+5)
+    val total = list1.reduce(_+_)
+    val list2 = list.map(_+5)
     println("total:"+total)
     val bigInt = new java.math.BigInteger("393286483764329643264923")
     list1.foreach(println)
-    println("list2")
+    println("list2:")
     list2.foreach(println)
     val stringArray = new Array[String](3)
     stringArray(0) = "line1"
@@ -57,7 +57,7 @@ object Main extends App {
     val stringArray1 = Array("line4", "line5", "line6")
     for (i <- 0 to 2)
       print(stringArray1(i)+"#")
-    println(stringArray.mkString("@@"))
+    println(stringArray.mkString("\n", "@@",""))
 
     val tuple1 = ("Obama", "Politics", 0.98)
     println(tuple1._2)
@@ -68,10 +68,9 @@ object Main extends App {
     val map1 = Map[String, Int]("Obama" -> 5, "Xi" -> 100)
     println (map1.toString())
 
-    val file = Source.fromFile("/Users/yhan/workspace/scala/test1/src/main.scala").getLines().toList
+    val file = Source.fromFile("/Users/yhan/workspace/scala/test2/src/main/scala/test2/Main.scala").getLines().toList
     val width = file.foldLeft(0)((r,b:String) => if (r > b.length.toString.length) r else b.length.toString.length)
-    for (line <- file) {
-      println (" " * (width - line.length.toString.length)+line.length.toString+"| "+line)
-    }
+    file.foreach(line =>
+      println(" " * (width - line.length.toString.length)+line.length.toString+"| "+line))
   }
 }

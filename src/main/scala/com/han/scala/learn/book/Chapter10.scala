@@ -26,6 +26,7 @@ abstract class Element {
       ) yield line1 + line2
     )
 
+
   def widen(w: Int):Element = if (w <= width) this else this beside elem(' ', w - width, height)
 
   def heighten(h: Int):Element = if (h <= height) this else elem(' ', width, h - height) above this

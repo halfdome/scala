@@ -13,7 +13,7 @@ object checkSumAccumulator {
   def calculate (s: String): Int = {
     if (!cache.contains(s)) {
       val acc = new checkSumAccumulator
-      for (c <- s) acc.add(c.toByte)
+      s.foreach(c => acc.add(c.toByte))
       cache += (s -> acc.checkSum())
     }
     cache(s)
