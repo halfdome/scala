@@ -7,7 +7,7 @@ import scala.io.Source
  * Created by yhan on 2/12/15.
  */
 object Chapter9 extends App{
-  private val file = Source.fromFile("/Users/yhan/workspace/scala/test2/src/main/scala/test2/Main.scala").getLines().toList
+  private val file = Source.fromFile("/Users/yhan/workspace/scala/com.han.scala.learn.book/src/main/scala/com.han.scala.learn.book/Main.scala").getLines().toList
 
   def apply(query:String, matcher:(String, String)=>Boolean) =
     for (line <- file; if matcher(line, query)) yield line

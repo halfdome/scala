@@ -68,7 +68,7 @@ object Main extends App {
     val map1 = Map[String, Int]("Obama" -> 5, "Xi" -> 100)
     println (map1.toString())
 
-    val file = Source.fromFile("/Users/yhan/workspace/scala/test2/src/main/scala/test2/Main.scala").getLines().toList
+    val file = Source.fromFile("/Users/yhan/workspace/scala/com.han.scala.learn.book/src/main/scala/com.han.scala.learn.book/Main.scala").getLines().toList
     val width = file.foldLeft(0)((r,b:String) => if (r > b.length.toString.length) r else b.length.toString.length)
     file.foreach(line =>
       println(" " * (width - line.length.toString.length)+line.length.toString+"| "+line))
